@@ -14,7 +14,12 @@ app.get('/indexpage1', (req, res) => {
 
 app.get('/style', (req, res) => {
     res.setHeader("Content-Type", "text/css");
-    res.send("@font-face {  font-family: 'SAP Fiori Icons';  src:    url('https://vipulstorageacc.z13.web.core.windows.net/SAP-icons.ttf') format('truetype');  font-weight: normal;  font-style: normal;}")
+    res.send("@font-face {  font-family: 'SAP Fiori Icons';  src:    url('https://dtov41hw3tm6v.cloudfront.net/font') format('truetype');  font-weight: normal;  font-style: normal;}")
+});
+
+app.get('/font', function(req, res){
+  res.setHeader("Content-Type", "font/ttf");
+  res.download('https://vipulstorageacc.z13.web.core.windows.net/SAP-icons.ttf'); 
 });
 
 app.get('/', (req, res) => {
