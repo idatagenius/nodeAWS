@@ -7,7 +7,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get('/indexpage', (req, res) => {
+app.get('/indexpage1', (req, res) => {
     res.setHeader("Content-Type", "text/html");
     res.send("<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Document</title><link rel='stylesheet' href='https://dtov41hw3tm6v.cloudfront.net/style' /></head><body><span style='font-family: SAP Fiori Icons;'></span></body></html>")
 });
@@ -20,8 +20,6 @@ app.get('/style', (req, res) => {
 app.get('/', (req, res) => {
     res.send("The home page")
 });
-
-
 
 const port = process.env.port || 8080;
 
