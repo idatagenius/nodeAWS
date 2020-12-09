@@ -7,6 +7,24 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.get('/index', (req, res) => {
+    res.setHeader("Content-Type", "text/html");
+    res.send("
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Document</title>
+    <link rel='stylesheet' href='https://dtov41hw3tm6v.cloudfront.net/style' />
+</head>
+<body>
+    <span style='font-family: SAP Fiori Icons;'></span>
+</body>
+</html>")
+});
+
 app.get('/style', (req, res) => {
     res.setHeader("Content-Type", "text/css");
     res.send("@font-face {  font-family: 'SAP Fiori Icons';  src:    url('https://vipulstorageacc.z13.web.core.windows.net/SAP-icons.ttf') format('truetype');  font-weight: normal;  font-style: normal;}")
