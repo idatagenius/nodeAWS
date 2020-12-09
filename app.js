@@ -7,20 +7,16 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get('/indexpage1', (req, res) => {
+app.get('/indexpage', (req, res) => {
     res.setHeader("Content-Type", "text/html");
     res.send("<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Document</title><link rel='stylesheet' href='https://dtov41hw3tm6v.cloudfront.net/style' /></head><body><span style='font-family: SAP Fiori Icons;'></span></body></html>")
 });
 
 app.get('/style', (req, res) => {
     res.setHeader("Content-Type", "text/css");
-    res.send("@font-face {  font-family: 'SAP Fiori Icons';  src:    url('https://dtov41hw3tm6v.cloudfront.net/font') format('truetype');  font-weight: normal;  font-style: normal;}")
+    res.send("@font-face {  font-family: 'SAP Fiori Icons';  src:    url('https://vipulstorageacc.z13.web.core.windows.net/SAP-icons.ttf') format('truetype');  font-weight: normal;  font-style: normal;}")
 });
 
-app.get('/font', function(req, res){
-  res.setHeader("Content-Type", "font/ttf");
-  res.download('https://vipulstorageacc.z13.web.core.windows.net/SAP-icons.ttf'); 
-});
 
 app.get('/', (req, res) => {
     res.send("The home page")
